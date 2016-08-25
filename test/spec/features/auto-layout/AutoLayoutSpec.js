@@ -14,13 +14,15 @@ describe('features/auto-layout', function() {
 
   describe('show me what ya got', function() {
 
-    var diagramXML = require('./ugly.bpmn');
+    var diagramXML = require('./tree.bpmn');
 
     beforeEach(bootstrapModeler(diagramXML, { modules: testModules }));
 
-    it.only('try', inject(function(autoLayout) {
+    it.only('try', inject(function(autoLayout, elementRegistry) {
 
-      autoLayout.layout();
+      var quelle = elementRegistry.get('StartEvent_1');
+
+      autoLayout.layout(quelle);
 
     }));
 
