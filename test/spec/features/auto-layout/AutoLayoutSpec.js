@@ -12,13 +12,13 @@ describe('features/auto-layout', function() {
 
   var testModules = [ coreModule, modelingModule, autoLayoutModule ];
 
-  describe('show me what ya got', function() {
+  describe('try', function() {
 
-    var diagramXML = require('./tree.bpmn');
+    var diagramXML = require('./tree1.bpmn');
 
     beforeEach(bootstrapModeler(diagramXML, { modules: testModules }));
 
-    it.only('try', inject(function(autoLayout, elementRegistry) {
+    it.only('1', inject(function(autoLayout, elementRegistry) {
 
       var quelle = elementRegistry.get('StartEvent_1');
 

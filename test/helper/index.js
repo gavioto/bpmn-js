@@ -115,6 +115,8 @@ function bootstrapBpmnJS(BpmnJS, diagram, options, locals) {
 
     BPMN_JS = new BpmnJS(_options);
 
+    window.BPMN_JS = BPMN_JS;
+
     BPMN_JS.importXML(diagram, done);
   };
 }
