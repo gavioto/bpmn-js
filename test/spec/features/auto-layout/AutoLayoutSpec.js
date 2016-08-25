@@ -14,7 +14,7 @@ describe('features/auto-layout', function() {
 
   describe('try', function() {
 
-    var diagramXML = require('./tree1.bpmn');
+    var diagramXML = require('./tree.bpmn');
 
     beforeEach(bootstrapModeler(diagramXML, { modules: testModules }));
 
