@@ -14,15 +14,13 @@ describe('features/auto-layout', function() {
 
   describe('try', function() {
 
-    var diagramXML = require('./tree.bpmn');
+    var diagramXML = require('./nested1.bpmn');
 
     beforeEach(bootstrapModeler(diagramXML, { modules: testModules }));
 
     it.only('1', inject(function(autoLayout, elementRegistry) {
 
-      var quelle = elementRegistry.get('StartEvent_1');
-
-      autoLayout.layout(quelle);
+      autoLayout.layout();
 
     }));
 
