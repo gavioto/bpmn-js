@@ -536,7 +536,7 @@ describe('features - label-editing', function() {
             // then
             var textbox = directEditing._textbox,
                 gfx = elementRegistry.getGraphics('empty-task'),
-                shapeClientRect = gfx.node.parentNode.getBoundingClientRect();
+                shapeClientRect = gfx.parentNode.getBoundingClientRect();
 
             var shapeRect = {
               top: shapeClientRect.top - container.offsetTop,
